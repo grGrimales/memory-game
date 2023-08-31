@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Juego de Memoria</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-gray-200 h-screen flex flex-col items-center justify-center">
+    <form id="setupForm" class="bg-white p-4 rounded">
+        <label for="gridSize" class="block text-sm font-medium text-gray-600">Tamaño de la cuadrícula:</label>
+        <select id="gridSize" class="mt-1 p-2 w-full">
+            <option value="4x4">4x4</option>
+            <option value="5x4">5x4</option>
+            <option value="6x4">6x4</option>
+        </select>
+
+        <label for="numPlayers" class="block text-sm font-medium text-gray-600 mt-4">Número de jugadores:</label>
+        <select id="numPlayers" class="mt-1 p-2 w-full">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <button type="submit" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Iniciar Juego
+        </button>
+    </form>
+
+    <div id="gameBoard" class="flex flex-wrap justify-center"></div>
+
+    <div id="scoreBoard" class="mt-4"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
